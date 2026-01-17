@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  static const String _baseUrl = 'http://10.189.155.102:8060';
+  static const String _baseUrl = 'http://10.149.135.102:8060';
   static const String _apiKey = 'secret-api-key';
 
   static Map<String, String> get _headers => {

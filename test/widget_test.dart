@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:apitest/main.dart';
-import 'package:apitest/providers/scan_provider.dart';
+import 'package:developers/main.dart';
+import 'package:developers/providers/scan_provider.dart';
 
 void main() {
   testWidgets('Dashboard loads', (WidgetTester tester) async {

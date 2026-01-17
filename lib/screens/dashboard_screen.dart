@@ -12,6 +12,7 @@ import 'vulnerability_list_screen.dart';
 import 'placeholder_screen.dart';
 import 'targets_screen.dart';
 import 'scans_screen.dart';
+import 'chatbot_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -121,25 +122,31 @@ class _DashboardScreenState extends State<DashboardScreen>
             onPressed: () {},
           ),
           const SizedBox(width: 4),
-          Container(
-            margin: const EdgeInsets.only(right: 16),
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              gradient: LinearGradient(
-                colors: [AppTheme.accentCyan, AppTheme.accentPurple],
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: AppTheme.accentCyan.withAlpha(40),
-                  blurRadius: 8,
-                  spreadRadius: 1,
-                ),
-              ],
+          GestureDetector(
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const ChatbotScreen()),
             ),
-            child: const CircleAvatar(
-              radius: 18,
-              backgroundColor: Colors.transparent,
-              child: Icon(Icons.person, color: Colors.white, size: 20),
+            child: Container(
+              margin: const EdgeInsets.only(right: 16),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: LinearGradient(
+                  colors: [AppTheme.accentCyan, AppTheme.accentPurple],
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: AppTheme.accentCyan.withAlpha(40),
+                    blurRadius: 8,
+                    spreadRadius: 1,
+                  ),
+                ],
+              ),
+              child: const CircleAvatar(
+                radius: 18,
+                backgroundColor: Colors.transparent,
+                child: Icon(Icons.smart_toy, color: Colors.white, size: 20),
+              ),
             ),
           ),
         ],
